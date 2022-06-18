@@ -22,7 +22,7 @@ from .helper.telegram_helper.filters import CustomFilters
 from .helper.telegram_helper.button_build import ButtonMaker
 from .modules import authorize, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, delete, count, leech_settings, list, search
 
-IMAGE_X = "https://telegra.ph/file/ccfc71eaaa7e1c6de4f11.jpg"
+IMAGE_X = "https://telegra.ph/file/86c51031a5604ede39eea.jpg"
 
 def stats(update, context):
     if ospath.exists('.git'):
@@ -70,8 +70,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Updates Channel", "https://t.me/AnimeDynastyEN")
-    buttons.buildbutton("Support Group", "https://t.me/AnimeDynastyEN_Support")
+    buttons.buildbutton("Updates Channel", "https://t.me/UserLazyXBot")
+    buttons.buildbutton("Support Group", "https://t.me/LazyCermin")
     uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
